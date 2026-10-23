@@ -1,0 +1,23 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {"hooks": [{"type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/consolex.py\" hook", "timeout": 200}]}
+    ],
+    "PreToolUse": [
+      {"matcher": "AskUserQuestion", "hooks": [{"type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/consolex.py\" hook", "timeout": 10}]}
+    ],
+    "PostToolUse": [
+      {"matcher": "Skill", "hooks": [{"type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/consolex.py\" hook", "timeout": 30}]},
+      {"matcher": "AskUserQuestion", "hooks": [{"type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/consolex.py\" hook", "timeout": 10}]}
+    ],
+    "Stop": [
+      {"hooks": [{"type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/consolex.py\" hook", "timeout": 200}]}
+    ],
+    "SessionStart": [
+      {"hooks": [{"type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/consolex.py\" hook", "timeout": 10}]}
+    ],
+    "SessionEnd": [
+      {"hooks": [{"type": "command", "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/consolex.py\" hook", "timeout": 10}]}
+    ]
+  }
+}

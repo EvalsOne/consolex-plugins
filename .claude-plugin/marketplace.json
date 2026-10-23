@@ -1,0 +1,17 @@
+{
+  "name": "consolex",
+  "owner": {
+    "name": "ConsoleX",
+    "url": "https://consolex.ai"
+  },
+  "description": "ConsoleX plugins for coding agents: do your ConsoleX tasks in Claude Code and have each delivery checked against the task's saved standard.",
+  "plugins": [
+    {
+      "name": "consolex",
+      "source": "./plugins/consolex",
+      "description": "Connect once, add ConsoleX tasks as Skills, save sessions as tasks, and check each delivery against the task's saved standard before Claude finishes.",
+      "category": "productivity",
+      "tags": ["consolex", "tasks", "checks", "evaluation", "skills"]
+    }
+  ]
+}
