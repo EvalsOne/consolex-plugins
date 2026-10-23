@@ -60,6 +60,10 @@ Everything runs locally with your user permissions. The plugin talks only to the
 
 **Sent to ConsoleX with a delivery.** The delivery (the reply, or the text files it names), the "Needs your confirmation" items, the model id, and the tool calls of this Claude Code session since the task started: commands, URLs, queries and file paths with their results. Long outputs are shortened, images are not sent, and keys and tokens are masked. Only the latest 80 tool calls are sent, so use one session per task. Set `CONSOLEX_TOOL_EVIDENCE=off` to send only the delivery.
 
+**Fetched from ConsoleX.** Your task list (`/consolex:tasks`), a task's method and the Skills it uses (`/consolex:add`, the hourly refresh, and when a task starts), and check results.
+
+**Sent at `/consolex:login`.** The computer's name (on macOS its Computer Name, otherwise the host name), so you can tell computers apart on the approval page and in Settings. A background process then polls ConsoleX until you approve or the code expires (10 minutes).
+
 **Sent with `/consolex:save`.** Your messages in the session, the final reply, the model id and the tool records (keys masked). Nothing is sent unless you run the command.
 
 Sessions where you have not started a ConsoleX task send nothing.
